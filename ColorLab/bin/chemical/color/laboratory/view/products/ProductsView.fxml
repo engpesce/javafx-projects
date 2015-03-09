@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane minHeight="550.0" minWidth="790.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chemical.color.laboratory.controller.products.ProductController">
+   <top>
+      <Pane prefHeight="92.0" prefWidth="790.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="165.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de Productos" textAlignment="CENTER">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="62.0" prefWidth="790.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="529.0" layoutY="19.0" prefHeight="25.0" prefWidth="216.0">
+               <children>
+                  <Button layoutX="569.0" layoutY="19.0" mnemonicParsing="false" text="Nuevo" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="640.0" layoutY="19.0" mnemonicParsing="false" text="Editar" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="707.0" layoutY="19.0" mnemonicParsing="false" text="Borrar" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <TableView fx:id="productTable" editable="false" >
+        <columns>
+          <TableColumn fx:id="codeColumn" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Descripcion" />
+            <TableColumn fx:id="unitColumn" prefWidth="75.0" text="Unidad" />
+            <TableColumn fx:id="measureColumn" prefWidth="75.0" text="Medida" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>

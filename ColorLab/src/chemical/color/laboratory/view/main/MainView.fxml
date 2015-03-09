@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chemical.color.laboratory.controller.main.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Application">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#selectedHomeMenu" text="Home" />
+                  <MenuItem mnemonicParsing="false" onAction="#selectedProductMenu" text="Products" />
+                  <MenuItem mnemonicParsing="false" onAction="#selectedLogoutMenu" text="Logout" />
+                  <MenuItem mnemonicParsing="false" onAction="#selectedExitMenu" text="Exit" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#selectedAboutMenu" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="40.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="800.0">
+               <items>
+                  <Label text="User:" />
+                  <Label fx:id="statusBarUser" prefHeight="15.0" prefWidth="259.0" />
+                  <Label text="Date:" />
+                  <Label fx:id="statusBarDate" prefHeight="15.0" prefWidth="146.0" />
+                  <Label text="Status:" />
+                  <Label fx:id="statusBarStatus" prefHeight="15.0" prefWidth="231.0" />
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <BorderPane fx:id="container" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
